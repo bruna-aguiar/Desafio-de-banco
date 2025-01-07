@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        Banco banco = new Banco();
         Cliente joao = new Cliente();
         joao.setNome("Joao");
 
@@ -16,5 +17,10 @@ public class Main {
         contaJose.transferir(80,contaMaria);
         contaJose.ImprimirExtrato();
         contaMaria.ImprimirExtrato();
+
+        banco.adicionarConta(contaJose);
+        banco.adicionarConta(contaMaria);
+
+        banco.exibirContas();
     }
 }
